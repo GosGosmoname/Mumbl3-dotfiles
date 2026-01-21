@@ -7,6 +7,12 @@ Mumbl3 is my personal Hyprland setup focused on performance, minimal visuals, an
 
 ---
 
+## Please Note ⚠️ 
+** The Mumbl3 Dotfiles are still under construction. ** 
+---
+
+---
+
 ## ✨ Features
 
 * ⚡ **Hyprland** (Wayland) with smooth animations

@@ -72,7 +72,7 @@ playerctl
 > Back up your `~/.config` first.
 
 ```bash
-git clone https://github.com/GosGosmoname/mumbl3-dotfiles.git
+git clone https://github.com/BotrosDev/mumbl3-dotfiles.git
 cd mumbl3-dotfiles
 cp -r .config/* ~/.config/
 ```

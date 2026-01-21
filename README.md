@@ -149,4 +149,4 @@ MIT License — do whatever you want, just don’t claim you made it from scratc
 
 ---
 
-**Made with ❤️ by Mumbl3**
+**Made with ❤️ by @BotrosDev & @MumbleGameZ (duie.exe)**

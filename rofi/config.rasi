@@ -1,0 +1,103 @@
+
+
+configuration {
+    modi: "drun,script:~/.config/hypr/scripts/rofi_launcher.sh";
+    show-icons: true;
+    display-combi: " "; /* This replaces the 'combi' text with a search icon */
+    drun-display-format: "{name}";
+    font: "JetBrainsMono Nerd Font 11", "FiraCode Nerd Font 12";
+    scroll-method: 0;
+    cycle: false;
+}
+
+@theme "/dev/null" /* Ignore default themes to prevent color conflicts */
+
+/* --- COLORS (Catppuccin Mocha) --- */
+* {
+    bg: #1e1e2e;
+    cur: #313244;
+    fg: #cdd6f4;
+    purple: #cba6f7;
+    red: #f38ba8;
+}
+
+window {
+    location: south;
+    anchor: south;
+    width: 600px;  /* Vertical menus look better narrow */
+    x-offset: 0px;
+    y-offset: -30px; /* ADJUST THIS: Pushes the menu UP so it doesn't cover Waybar */
+    
+    background-color: @bg;
+    border: 2px;
+    border-color: @purple;
+    border-radius: 12px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ inputbar, listview ];
+    padding: 10px;
+}
+
+inputbar {
+    spacing: 10px;
+    padding: 10px;
+    background-color: @cur;
+    border-radius: 8px;
+    children: [ prompt, entry ];
+    margin: 0px 0px 10px 0px;
+}
+
+prompt {
+    background-color: @purple;
+    text-color: @bg;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    placeholder: "Search...";
+    placeholder-color: #585b70;
+}
+
+listview {
+    enabled: true;
+    columns: 1;      /* Vertical List */
+    lines: 8;        /* Show 8 items */
+    cycle: false;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    fixed-height: true;
+    background-color: transparent;
+}
+
+element {
+    enabled: true;
+    orientation: horizontal; /* Icon on left, Text on right */
+    spacing: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: transparent; /* Removes that white box from your image */
+    text-color: @fg;
+}
+
+element selected {
+    background-color: @cur;
+    text-color: @purple;
+}
+
+element-icon {
+    size: 32px;
+    background-color: transparent; /* Ensures no background on icon */
+}
+
+element-text {
+    vertical-align: 0.5;
+    background-color: transparent;
+    text-color: inherit; /* Fixes the visibility of the names */
+}
